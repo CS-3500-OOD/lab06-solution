@@ -1,5 +1,5 @@
 plugins {
-    id 'java'
+//    id 'java'  //don't need java b/c it is included with application plugin
     id 'application'
     id 'jacoco'
 }
@@ -17,7 +17,7 @@ jacocoTestReport {
     dependsOn test // 2) above
 }
 
-group 'org.example'
+group 'cs3500.project'
 version '1.0-SNAPSHOT'
 
 repositories {

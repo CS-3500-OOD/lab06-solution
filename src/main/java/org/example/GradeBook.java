@@ -11,6 +11,7 @@ public class GradeBook {
         exam3 = e3;
     }
 
+
     public double getAverage() {
         return (exam1 + exam2 + exam3) / 3.0;
     }

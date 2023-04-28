@@ -2,6 +2,9 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        GradeBook cs3500 = new GradeBook(100, 100, 100);
+
+        System.out.println(cs3500.getAverage());
+
     }
 }
