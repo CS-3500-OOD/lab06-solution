@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'jacoco'
+}
+
+//Jacoco for code coverage
+//Jacoco generates the report, but needs to have the
+//tests already executed. But it isn't a dependency automatically.
+//So, we add in the following two steps to ensure 1) test coverage is
+//run after tests automatically, and 2) if the jacocoTestReport
+//task is run, the tests will be (re)run first.
+test {
+    finalizedBy jacocoTestReport // 1) above
+}
+jacocoTestReport {
+    dependsOn test // 2) above
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
