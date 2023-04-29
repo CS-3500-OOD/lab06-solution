@@ -27,3 +27,7 @@ jobs:
 #        uses: cicirello/jacoco-badge-generator@v2
 #        with:
 #          jacoco-csv-file: build/reports/jacoco/jacoco.csv
+      - uses: actions/upload-artifact@v3
+        with:
+          name: JaCoCo_Report
+          path: build/reports/jacoco/
