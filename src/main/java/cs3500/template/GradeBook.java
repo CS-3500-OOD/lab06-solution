@@ -1,4 +1,4 @@
-package org.example;
+package cs3500.template;
 
 public class GradeBook {
     private int exam1;

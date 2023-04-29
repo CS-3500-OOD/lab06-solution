@@ -1,4 +1,4 @@
-package org.example;
+package cs3500.template;
 
 public class Main {
     public static void main(String[] args) {

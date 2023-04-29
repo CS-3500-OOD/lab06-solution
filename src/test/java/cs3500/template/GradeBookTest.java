@@ -1,11 +1,10 @@
-package org.example;
+package cs3500.template;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class GradeBookTest {
-
 
     @Test
     void checkAveraging() {

@@ -15,6 +15,12 @@ test {
 }
 jacocoTestReport {
     dependsOn test // 2) above
+    reports {
+        xml.required = true
+        csv.required = true
+        csv.destination file("${buildDir}/reports/jacoco/jacoco.csv")
+//        html.outputLocation  layout.buildDirectory.dir('jacocoHtml')
+    }
 }
 
 group 'cs3500.project'
