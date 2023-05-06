@@ -16,11 +16,8 @@ class GradeBookTest {
 
   @Test
   public void checkSystemOutWrite() throws Exception {
-    String text = tapSystemOut(() -> {
-      printError("problem!");
-    }).trim();
-    assertEquals("problem!", text);
-
+    String text = tapSystemOut(() -> printError("problem!"));
+    assertEquals("problem!", text.trim());
   }
 
   private void printError(String output) {
