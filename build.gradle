@@ -1,26 +1,25 @@
 plugins {
-//    id 'java'  //don't need java b/c it is included with application plugin
     id 'application'
     id 'jacoco'
+    id 'checkstyle'
+}
+
+checkstyle {
+    toolVersion = '10.10.0'
+    configFile = 'config/checkstyle/cs3500-checkstyle.xml' as File
+}
+
+application {
+    mainClass = "cs3500.template.code.Main"
 }
 
 //Jacoco for code coverage
-//Jacoco generates the report, but needs to have the
-//tests already executed. But it isn't a dependency automatically.
-//So, we add in the following two steps to ensure 1) test coverage is
-//run after tests automatically, and 2) if the jacocoTestReport
-//task is run, the tests will be (re)run first.
+
 test {
-    finalizedBy jacocoTestReport // 1) above
+    finalizedBy jacocoTestReport // generate report after code coverage test
 }
 jacocoTestReport {
-    dependsOn test // 2) above
-    reports {
-        xml.required = true
-        csv.required = true
-        csv.destination file("${buildDir}/reports/jacoco/jacoco.csv")
-//        html.outputLocation  layout.buildDirectory.dir('jacocoHtml')
-    }
+    dependsOn test // make sure that test task run before reports are run.
 }
 
 group 'cs3500.project'

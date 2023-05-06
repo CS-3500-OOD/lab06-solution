@@ -16,14 +16,17 @@ jobs:
           distribution: 'adopt'
           cache: gradle
 
-      - name: Build with Gradle
+      - name: Build the project
         run: ./gradlew build
 
+      # Note that running test task will also perform code coverage
       - name: Run Tests
         run: ./gradlew test
 
+      - name: Produce JavaDoc
+        run: ./gradlew javadoc
 
       - uses: actions/upload-artifact@v3
         with:
-          name: JaCoCo_Report
-          path: build/reports/jacoco/
+          name: Reports
+          path: build/reports/
