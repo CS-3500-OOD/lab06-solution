@@ -5,6 +5,7 @@ on: [push]
 jobs:
   build:
     runs-on: self-hosted
+    timeout-minutes: 3
 
     steps:
       - uses: actions/checkout@v3
@@ -30,3 +31,8 @@ jobs:
         with:
           name: Reports
           path: build/reports/
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: JavaDocs
+          path: build/docs
