@@ -1,5 +1,6 @@
-# Lab 06 Template Repository
-CS 3500 // Object-Oriented Design // Summer 1 2023
+# 3500 Lab 06 Project Repo
+
+[Lab Write Up]()
 
 This lab introduces JSON, the Proxy Pattern, and Sockets. 
 
