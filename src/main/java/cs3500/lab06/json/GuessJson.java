@@ -14,6 +14,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  *
  * @param guess the player's guess
  */
-public record PlayerGuessJson(
+public record GuessJson(
     @JsonProperty("guess") int guess) {
 }

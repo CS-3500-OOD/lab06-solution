@@ -6,7 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import cs3500.lab06.json.HintJson;
 import cs3500.lab06.json.JsonUtils;
 import cs3500.lab06.json.MessageJson;
-import cs3500.lab06.json.PlayerGuessJson;
+import cs3500.lab06.json.GuessJson;
 import cs3500.lab06.json.WinJson;
 import java.io.IOException;
 import java.io.InputStream;
@@ -94,7 +94,7 @@ public class ProxyDealer {
 
     int guess = getPlayerGuess(guessArgs);
 
-    PlayerGuessJson response = new PlayerGuessJson(guess);
+    GuessJson response = new GuessJson(guess);
     JsonNode jsonResponse = JsonUtils.serializeRecord(response);
     this.out.println(jsonResponse);
   }
