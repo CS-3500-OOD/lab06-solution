@@ -23,7 +23,7 @@ public class Driver {
     Socket server = new Socket(host, port);
 
     // ProxyReferee proxyReferee = new ProxyReferee(server, new RandomPlayer());
-    ProxyDealer proxyDealer = new ProxyDealer(server, new ManualPlayer(in));
+    ProxyDealer proxyDealer = new ProxyDealer(server, new ManualPlayerController(in));
     proxyDealer.run();
   }
 

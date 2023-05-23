@@ -2,10 +2,10 @@ package cs3500.lab06.client;
 
 import java.util.Scanner;
 
-public class ManualPlayer implements PlayerController {
+public class ManualPlayerController implements PlayerController {
   Scanner sc;
 
-  public ManualPlayer(Readable in) {
+  public ManualPlayerController(Readable in) {
     this.sc = new Scanner(in);
   }
 
