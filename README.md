@@ -1,9 +1,9 @@
-# 3500 Template Repository
+# Lab 06 Template Repository
+CS 3500 // Object-Oriented Design // Summer 1 2023
 
-This goal of this project is to be the 
-bassis of the PA template repos for summer 2023. 
+This lab introduces JSON, the Proxy Pattern, and Sockets. 
 
-It include several additional tools:
+This repository includes several tools:
 1. Gradle Build Automation
-1. JaCoCo for Test Coverage
-1. CheckStyle for Code Style Checks (Using the custom [cs3500 check file](./config/checkstyle/cs3500-checkstyle.xml)) 
+2. JaCoCo for Test Coverage
+3. CheckStyle for Code Style Checks (Using the custom [cs3500 check file](./config/checkstyle/cs3500-checkstyle.xml)) 
