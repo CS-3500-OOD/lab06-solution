@@ -4,9 +4,12 @@ import java.util.Scanner;
 
 public class ManualPlayerController implements PlayerController {
   Scanner sc;
+  int lastGuess = -1;
 
   public ManualPlayerController(Readable in) {
     this.sc = new Scanner(in);
+    System.out.println("👋 Welcome to Guess the Number!");
+    System.out.print("What number do you think is right? Enter your guess: ");
   }
 
   /**
@@ -17,9 +20,9 @@ public class ManualPlayerController implements PlayerController {
   @Override
   public int guess() {
     if (sc.hasNextInt()) {
-      return sc.nextInt();
+      lastGuess = sc.nextInt();
     }
-    return -1;
+    return lastGuess;
   }
 
   /**
@@ -31,13 +34,13 @@ public class ManualPlayerController implements PlayerController {
    */
   @Override
   public int guess(boolean lastGuessWasTooHigh) {
-    if (sc.hasNextInt()) {
-      String hint = lastGuessWasTooHigh ? "high" : "low";
-      System.out.println("That number was a bit too " + hint + ". Guess again:");
+    String hint = lastGuessWasTooHigh ? "high" : "low";
+    System.out.print(lastGuess + " is a bit too " + hint + ". Guess again: ");
 
-      return sc.nextInt();
+    if (sc.hasNextInt()) {
+      lastGuess = sc.nextInt();
     }
-    return -1;
+    return lastGuess;
   }
 
   /**
@@ -48,7 +51,7 @@ public class ManualPlayerController implements PlayerController {
   @Override
   public void win(boolean isWinner) {
     if (isWinner) {
-      System.out.println("Congratulations! You guessed the number!");
+      System.out.println("Congratulations! You guessed the number: " + lastGuess + "! 🥳");
       return;
     }
     System.out.println("Oh no! You did not guess the right number.");
