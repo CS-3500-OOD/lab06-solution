@@ -15,5 +15,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * @param isWinner true if this client is the winner
  */
 public record WinJson(
-    @JsonProperty("win") boolean isWinner) {
+    @JsonProperty("win") boolean win) {
+
+    public boolean isWinner() {
+      return win;
+    }
 }
