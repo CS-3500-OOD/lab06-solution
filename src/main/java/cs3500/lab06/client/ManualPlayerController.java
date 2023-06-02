@@ -8,7 +8,7 @@ public class ManualPlayerController implements PlayerController {
 
   public ManualPlayerController(Readable in) {
     this.sc = new Scanner(in);
-    System.out.println("👋 Welcome to Guess the Number!");
+    System.out.println("Welcome to Guess the Number!");
     System.out.print("What number do you think is right? Enter your guess: ");
   }
 
@@ -51,7 +51,7 @@ public class ManualPlayerController implements PlayerController {
   @Override
   public void win(boolean isWinner) {
     if (isWinner) {
-      System.out.println("Congratulations! You guessed the number: " + lastGuess + "! 🥳");
+      System.out.println("Congratulations! You guessed the number: " + lastGuess + "!");
       return;
     }
     System.out.println("Oh no! You did not guess the right number.");

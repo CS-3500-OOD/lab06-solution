@@ -1,6 +1,6 @@
-# 3500 Lab 06 Project Repo
+# 3500 Lab 06 Sample Solution
 
-[Lab Write Up]()
+[Lab Write Up](https://markefontenot.notion.site/Lab-6-Guess-the-Number-61d6aafdf5994e5da8e76be6c162512f)
 
 This lab introduces JSON, the Proxy Pattern, and Sockets. 
 

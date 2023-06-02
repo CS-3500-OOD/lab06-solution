@@ -22,7 +22,8 @@ public class Driver {
       throws IOException, IllegalStateException {
     Socket server = new Socket(host, port);
 
-    // ProxyReferee proxyReferee = new ProxyReferee(server, new RandomPlayer());
+    // uncomment line 26 to use RandomPlayerController instead of ManualPlayerController
+    // ProxyReferee proxyReferee = new ProxyReferee(server, new RandomPlayerController());
     ProxyDealer proxyDealer = new ProxyDealer(server, new ManualPlayerController(in));
     proxyDealer.run();
   }
